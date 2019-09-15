@@ -11,10 +11,7 @@ const {
     VISIBILITY_COLLISION,
 } = constants
 
-const oak = createClient(process.platform === "darwin" ? {
-    inbound: 'tcp://192.168.1.3:10101',
-    outbound: 'tcp://192.168.1.3:10102',
-} : {})
+const oak = createClient()
 
 /* get random element from an array */
 const rndarr = arr => arr[Math.floor(Math.random()*arr.length)]
