@@ -44,7 +44,7 @@ oak.event('playerChat', async (pid, text) => {
     const msg = `[chat] ${name}: ${text}`
 
     /* log stuff into our local console */
-    console.log('[chat]', `${name}:`, msg)
+    console.log('[chat]', `${name}:`, text)
 
     /* send messages to each clients' chat windows */
     oak.chatBroadcast(msg)
