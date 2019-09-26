@@ -11,10 +11,7 @@ const {
     VISIBILITY_COLLISION,
 } = constants
 
-const oak = createClient(process.platform === "darwin" ? {
-    inbound: 'tcp://192.168.1.3:10101',
-    outbound: 'tcp://192.168.1.3:10102',
-} : {})
+const oak = createClient()
 
 /* get random element from an array */
 const rndarr = arr => arr[Math.floor(Math.random()*arr.length)]
@@ -62,6 +59,7 @@ oak.cmd('clear', (pid) => {
 /* Player system */
 
 const spawnLocs = [
+    { name: "pete", pos: [61.4763, 4.72524, 107.708 ]},
     { name: "tommy", pos: [8.62861251831, 22.8868865967, -602.147888184 ]},
     { name: "oakhill", pos: [738.030334473, 106.889381409, -228.563537598 ]},
     { name: "hoboken", pos: [537.296386719, -5.01502513885, 77.8488616943 ]},
@@ -71,7 +69,6 @@ const spawnLocs = [
     { name: "china", pos: [-1709.24157715, 16.0029373169, 582.041442871 ]},
     { name: "salieri", pos: [-1774.59301758, -4.88487052917, -2.40491962433 ]},
     { name: "work", pos: [-2550.85546875, -3.96487784386, -554.806213379 ]},
-    { name: "pete", pos: [61.4763, 4.72524, 107.708 ]},
     { name: "racing", pos: [-3534.42993164, 7.05113887787, -651.97338867 ]},
 ]
 

@@ -3,13 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "public": false,
   "scripts": {
-    "dev": "nodemon"
+    "dev": "nodemon",
+    "release": "release-it",
+    "release-patch": "release-it patch --ci",
+    "release-minor": "release-it minor --ci",
+    "release-major": "release-it major --ci"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "oakwood": "^2.3.0"
+    "oakwood": "^2.3.1"
+  },
+  "devDependencies": {
+    "release-it": "^12.4.1"
+  },
+  "release-it": {
+    "npm": {
+      "publish": false
+    }
   }
 }
